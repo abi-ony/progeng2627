@@ -34,7 +34,7 @@ int main (){
     std::cin >> n;
 
     //initialise, condition, increment
-    for (int i = 0; i < n+1; i ++){
+    for (int i = 0; i < n; i ++){
         sum = sum + mypow(base, i+1);
     }
 
