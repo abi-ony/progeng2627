@@ -29,11 +29,15 @@ int main() {
         }
     }
 
-    std::cout << "There are " << total << " occurences of " << s << " at indices: " << std::endl;
+    std::cout << "There are " << total << " occurences of " << s << std::endl;
 
-    //traverse indices vector to find where occurences are located
-    for(int i = 0; i < indices.size(); i++){ 
-        //print indices
-        std::cout << indices[i] << std::endl;
+    if (indices.size() > 0){
+        std::cout << "at indices: " << std::endl;
+
+        //traverse indices vector to find where occurences are located
+        for(int i = 0; i < indices.size(); i++){ 
+            //print indices
+            std::cout << indices[i] << std::endl;
+        }
     }
 }
