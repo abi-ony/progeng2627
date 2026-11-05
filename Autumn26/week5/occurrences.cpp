@@ -20,12 +20,20 @@ int main() {
     std::cin >> s;
 
     int total = 0; //initialising total for running total algorithm
+    std::vector<int> indices; //to store indices where values are found
 
     for(int i = 0; i <n; i++){
         if (v[i] == s){
             total ++;
+            indices.push_back(i);
         }
     }
 
-    std::cout << "There are " << total << " occurences of " << s;
+    std::cout << "There are " << total << " occurences of " << s << " at indices: " << std::endl;
+
+    //traverse indices vector to find where occurences are located
+    for(int i = 0; i < indices.size(); i++){ 
+        //print indices
+        std::cout << indices[i] << std::endl;
+    }
 }
